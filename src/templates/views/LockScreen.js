@@ -10,7 +10,7 @@ import UserPage from "./UserPage";
 export default function LockScreen(props){
     
     return (
-        <div className="p-lockScreen">
+        <div className="v-lockScreen">
             <Wallpaper wallpaperImage={wallpaperImage}/>
             <LoginForm setIsAuth={props.setIsAuth}/>
         </div>

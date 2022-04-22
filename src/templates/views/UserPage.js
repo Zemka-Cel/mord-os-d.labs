@@ -8,7 +8,7 @@ import DesktopIcons from "./DesktopIcons";
 export default function UserPage(props) {
     return (
         <>
-            <div className="p-desktop">
+            <div className="v-desktop">
                 <Wallpaper wallpaperImage={wallpaperImage}/>
                 <DesktopIcons />
                 <Taskbar userImg={userImg} setIsAuth={props.setIsAuth}/>
