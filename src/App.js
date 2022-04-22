@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import "./resources/styles/styles.scss";
+
+
+// import { Route, Routes, Switch } from 'react-router-dom';
+import React, { useContext } from "react";
+import { Route } from 'react-router-dom';
+import LockScreen from './templates/views/LockScreen';
+import UserPage from './templates/views/UserPage';
+import { Switch } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+
 
 function App() {
+
+  const [isAuth, setIsAuth] = useState(false);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+        <Switch>
+        {!isAuth ? (
+        <Route exact path="/" ><LockScreen setIsAuth={setIsAuth}/></Route>
+        ) : ( 
+          <>
+         { console.log("userpage")}
+            <Route path="/"><UserPage setIsAuth={setIsAuth}/></Route>
+          </>
+        )}
+        </Switch>
   );
 }
 

@@ -1,0 +1,17 @@
+//BASE
+@import './base/reset.scss';
+@import './base/fonts.scss';
+
+//COMPONENTS
+@import './components/wallpaper.scss';
+@import './components/login.scss';
+@import './components/taskbar.scss';
+@import './components/menu.scss';
+@import './components/icon.scss';
+
+
+
+// PAGES
+@import './pages/homePage.scss';
+@import './pages/desktop.scss';
+@import './pages/desktopIcons.scss';

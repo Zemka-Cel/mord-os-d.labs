@@ -1,0 +1,55 @@
+.c-login{
+    height: 100%;
+    display: flex;
+   // flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    &__wrapper{
+        min-width: 320px;
+        text-align: center;
+        padding: 50px;
+        background-color: rgba(0,0,0, 0.5);
+    }
+
+    &__userImg{
+        width: 86px;
+        height: 86px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    &__form{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 15px;
+
+        input{
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 0;
+            font-size: 14px;
+            padding: 6px;
+            text-align: center;
+
+            &:focus-visible{
+                border:solid 1px rgb(85, 51, 255);
+            }
+        }
+
+        input[type=submit]{
+            margin-top: 20px;
+            background-color: rgb(85, 51, 255);
+            color: white;
+            font-weight: bold;
+        }
+
+        &_error{
+            margin-top: 2px;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+        }
+    }
+}

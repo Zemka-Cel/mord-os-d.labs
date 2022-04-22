@@ -1,0 +1,36 @@
+$taskbar-height: 65px;
+
+.c-taskbar{
+    width: 100%;
+    height: $taskbar-height;
+    padding: 0 20px;
+    background-color: rgba(85, 51, 255, 0.5);
+    color: white;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    //justify-content: space-between;
+    align-items: center;
+
+    &__menu{
+        
+        display: flex;
+        align-items: center;
+        height: 100%;
+
+        &_logo{
+            width: 50px;
+            cursor: pointer;
+            
+        }
+    }
+
+    &__date{
+        margin-left: auto;
+        text-align: right;
+
+        p:last-of-type{
+            margin-top: 5px;
+        }
+    }
+}

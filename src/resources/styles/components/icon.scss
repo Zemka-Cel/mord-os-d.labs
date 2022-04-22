@@ -1,0 +1,33 @@
+$icon-width: 85px;
+$icon-height: 100px;
+
+.c-icon{
+    display: grid;
+    width: $icon-width;
+    grid-template-rows: 45px 33px;
+    box-sizing: border-box;
+    padding: 10px 2px;
+    background-color: rgba(0,0,0, 0.3);
+    justify-content: center;
+
+    &__img{
+        width: 40px;
+        height: 40px;
+        margin: 0 auto;
+    }
+
+    &__text{
+        font-weight: 500;
+        color: white;
+        font-size: 12px;
+        line-height: 14px;
+        text-align: center;
+        padding: 4px;
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;   
+        -webkit-line-clamp: 2;   
+        -webkit-box-orient: vertical;     
+    }
+}
