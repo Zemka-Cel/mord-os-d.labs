@@ -8,21 +8,28 @@ import LockScreen from './templates/views/LockScreen';
 import UserPage from './templates/views/UserPage';
 import { Switch } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+export const isAuthorisedContext = React.createContext(null);
+
 
 
 function App() {
 
   const [isAuth, setIsAuth] = useState(false);
+  const value = { state: { isAuth }, actions: { setIsAuth } };
   return (
-        <Switch>
+    <Switch>
+      <isAuthorisedContext.Provider value={value}>
+
         {!isAuth ? (
-        <Route exact path="/" ><LockScreen setIsAuth={setIsAuth}/></Route>
-        ) : ( 
+          <Route exact path="/" component={LockScreen} />
+        ) : (
           <>
-            <Route path="/"><UserPage setIsAuth={setIsAuth}/></Route>
+            <Route path="/" component={UserPage} />
           </>
         )}
-        </Switch>
+      </isAuthorisedContext.Provider>
+
+    </Switch>
   );
 }
 

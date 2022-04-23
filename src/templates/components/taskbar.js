@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import menuLogo from './../../resources/assets/images/logo.png'
-
-import { Link } from "react-router-dom";
 import Menu from "./menu";
 
 
@@ -14,8 +12,6 @@ export default function Taskbar(props) {
 
     const currentTime = dateState.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true });
     const currentDate = dateState.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
-
-    
 
 
     const [showMenu, setShowMenu] = useState(false);
@@ -35,7 +31,7 @@ export default function Taskbar(props) {
             <div className="c-taskbar__menu">
                 <img className="c-taskbar__menu_logo" src={menuLogo} onClick={toggleMenu}/>
                 {showMenu ? (
-                    <Menu userImg={props.userImg} setIsAuth={props.setIsAuth}/>
+                    <Menu userImg={props.userImg} />
                 ):null}
             </div>
             <div className="c-taskbar__date">

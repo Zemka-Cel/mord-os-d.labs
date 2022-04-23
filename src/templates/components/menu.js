@@ -1,9 +1,14 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
+import { isAuthorisedContext } from "./../../App";
+
 
 export default function Menu(props) {
 
+    const { state, actions } = useContext(isAuthorisedContext);
+
+
     const handleLogout = () => {
-        props.setIsAuth(false);
+        actions.setIsAuth(false);
     }
 
     return (

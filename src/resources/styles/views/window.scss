@@ -1,6 +1,7 @@
 $banner-height: 40px;
 
 .v-window{
+    display: none;
     width: 100%;
     height: calc(100% - $taskbar-height);
     position: absolute;

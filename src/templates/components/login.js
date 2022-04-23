@@ -1,10 +1,12 @@
 import userImg from "./../../resources/assets/images/user.png";
 import React, { useContext, useState } from "react";
-
+import { isAuthorisedContext } from "./../../App";
 
 export default function Login(props) {
     // React States
     const [errorMessages, setErrorMessages] = useState({});
+    const { state, actions } = useContext(isAuthorisedContext);
+
    
     // User Login info
     const database = [
@@ -38,7 +40,7 @@ export default function Login(props) {
                 // Invalid password
                 setErrorMessages({ name: "pass", message: errors.pass });
             } else {
-                props.setIsAuth(true);
+                actions.setIsAuth(true);
             }
         } else {
             // Email not found

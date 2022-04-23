@@ -4,12 +4,12 @@ import Wallpaper from "../components/wallpaper";
 import wallpaperImage from "./../../resources/assets/images/wallpaper2.jpg";
 
 
-export default function LockScreen(props){
+export default function LockScreen(){
     
     return (
         <div className="v-lockScreen">
             <Wallpaper wallpaperImage={wallpaperImage}/>
-            <LoginForm setIsAuth={props.setIsAuth}/>
+            <LoginForm />
         </div>
     );
 }
