@@ -19,7 +19,6 @@ function App() {
         <Route exact path="/" ><LockScreen setIsAuth={setIsAuth}/></Route>
         ) : ( 
           <>
-         { console.log("userpage")}
             <Route path="/"><UserPage setIsAuth={setIsAuth}/></Route>
           </>
         )}

@@ -20,61 +20,19 @@ export default function DesktopIcons(props) {
         },
         {
             img: folder,
-            text: "Documents"
+            text: "My Docs"
         },
         {
             img: txtFile,
-            text: "myFile.txt"
+            text: "txt-file.txt"
         },
-        {
-            img: bin,
-            text: "Recycle bin"
-        },
-        {
-            img: myComputer,
-            text: "This PC"
-        },
-        {
-            img: folder,
-            text: "Documents"
-        },
-        {
-            img: txtFile,
-            text: "myFile.txt"
-        },
-        {
-            img: bin,
-            text: "Recycle bin"
-        },
-        {
-            img: myComputer,
-            text: "This PC"
-        },
-        {
-            img: folder,
-            text: "Documents"
-        },
-        {
-            img: txtFile,
-            text: "myFile.txt"
-        },  
-        {
-            img: bin,
-            text: "Recycle bin"
-        },
-        {
-            img: myComputer,
-            text: "This PC"
-        },
-        {
-            img: folder,
-            text: "Lorem ipsum dolor sit amet"
-        },
-        {
-            img: txtFile,
-            text: "myFile.txt"
-        },
+       
     ];
+
+    const handleIconClick = () => {
+        
+    }
+
 
     return (
         <>
@@ -83,8 +41,7 @@ export default function DesktopIcons(props) {
                 {database.map(item => {
                     return (
                         <>
-                            {console.log(item.text)}
-                            <Icon icon={item.img} text={item.text} />
+                            <Icon icon={item.img} text={item.text} onClick={handleIconClick}/>
                         </>
                     );
                 })}

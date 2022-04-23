@@ -1,10 +1,7 @@
-import React, { useState } from "react";
-
-import { Link } from "react-router-dom";
+import React from "react";
 import LoginForm from "../components/login";
 import Wallpaper from "../components/wallpaper";
 import wallpaperImage from "./../../resources/assets/images/wallpaper2.jpg";
-import UserPage from "./UserPage";
 
 
 export default function LockScreen(props){

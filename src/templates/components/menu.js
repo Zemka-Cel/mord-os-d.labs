@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 export default function Menu(props) {
 
-    const handleLogout = (event) => {
+    const handleLogout = () => {
         props.setIsAuth(false);
     }
 
