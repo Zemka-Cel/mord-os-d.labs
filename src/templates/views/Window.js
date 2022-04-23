@@ -5,7 +5,7 @@ import maximiseIcon from "./../../resources/assets/images/maximise.png";
 
 
 export default function Window() {
-    const[isShown, setIsShown] = useState(false);
+    const[isShown, setIsShown] = useState(true);
 
     return (
         <>
@@ -20,7 +20,7 @@ export default function Window() {
                     
                 </div>
                 <div className="v-window__content">
-                    
+                    {/* display content based on icon type folder/text */}
                 </div>
             </div>
             ): null}

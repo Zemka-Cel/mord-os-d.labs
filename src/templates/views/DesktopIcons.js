@@ -11,27 +11,29 @@ export default function DesktopIcons(props) {
     // Icons info
     const database = [
         {
+            type: 'folder',
             img: bin,
             text: "Recycle bin"
         },
         {
+            type: 'folder',
             img: myComputer,
             text: "This PC"
         },
         {
+            type: 'folder',
             img: folder,
             text: "My Docs"
         },
         {
+            type: 'text',
             img: txtFile,
             text: "txt-file.txt"
         },
        
     ];
 
-    const handleIconClick = () => {
-        
-    }
+    
 
 
     return (
@@ -41,7 +43,7 @@ export default function DesktopIcons(props) {
                 {database.map(item => {
                     return (
                         <>
-                            <Icon icon={item.img} text={item.text} onClick={handleIconClick}/>
+                            <Icon type={item.type} icon={item.img} text={item.text} />
                         </>
                     );
                 })}

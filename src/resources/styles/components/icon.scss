@@ -2,6 +2,7 @@ $icon-width: 85px;
 $icon-height: 100px;
 
 .c-icon{
+    cursor: pointer;
     display: grid;
     width: $icon-width;
     grid-template-rows: 45px 33px;
