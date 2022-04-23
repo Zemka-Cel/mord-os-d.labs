@@ -59,7 +59,7 @@ export default function Login(props) {
         <>
         <div className="c-login">
             <div className="c-login__wrapper">
-                <img className="c-login__userImg" src={userImg}/>
+                <img className="c-login__userImg" src={userImg} alt="user"/>
                 <form className="c-login__form" onSubmit={handleSubmit}>
                     <input type="text" id="email" name="email" placeholder="email"/>
                     {renderErrorMessage("email")}

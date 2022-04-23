@@ -1,0 +1,29 @@
+.c-inputText{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &__saveBtn{
+        width: fit-content;
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #00b33c;
+        border: none;
+        border-radius: 10px;
+        color: white;
+        font-weight: 500;
+        margin: 5px;
+        margin-left: auto;
+    }
+
+    &__textarea{
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        font-size: 16px;
+        text-align: left;
+        resize: none;
+    }
+}

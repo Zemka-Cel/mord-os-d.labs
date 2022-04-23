@@ -29,7 +29,7 @@ export default function Taskbar(props) {
     return (
         <div className="c-taskbar">
             <div className="c-taskbar__menu">
-                <img className="c-taskbar__menu_logo" src={menuLogo} onClick={toggleMenu}/>
+                <img className="c-taskbar__menu_logo" src={menuLogo} alt="menu-icon" onClick={toggleMenu}/>
                 {showMenu ? (
                     <Menu userImg={props.userImg} />
                 ):null}

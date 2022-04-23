@@ -4,8 +4,9 @@ export default function InputText(props) {
     
     return (
         <>
-            <form className="c-icon">
-                <textarea id="w3review" name="w3review" rows="4"></textarea>
+            <form className="c-inputText">
+                <textarea className="c-inputText__textarea" id="textarea" name="text" placeholder="Start writing your notes here..."></textarea>
+                <input className="c-inputText__saveBtn" type="submit" value="Save" />
             </form>
         </>
     );

@@ -11,23 +11,31 @@ export default function DesktopIcons(props) {
     // Icons info
     const database = [
         {
+            
             type: 'folder',
             img: bin,
+            alt: "alt-text",
             text: "Recycle bin"
         },
         {
+            
             type: 'folder',
             img: myComputer,
+            alt: "alt-text",
             text: "This PC"
         },
         {
+            
             type: 'folder',
             img: folder,
+            alt: "alt-text",
             text: "My Docs"
         },
         {
+            
             type: 'text',
             img: txtFile,
+            alt: "alt-text",
             text: "txt-file.txt"
         },
        
@@ -43,7 +51,7 @@ export default function DesktopIcons(props) {
                 {database.map(item => {
                     return (
                         <>
-                            <Icon type={item.type} icon={item.img} text={item.text} />
+                            <Icon type={item.type} icon={item.img} alt={item.alt} text={item.text} />
                         </>
                     );
                 })}
