@@ -1,0 +1,36 @@
+$banner-height: 40px;
+
+.v-window{
+    width: 100%;
+    height: calc(100% - $taskbar-height);
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &__banner{
+        width: 100%;
+        height: $banner-height;
+        background-color: white;
+        display: flex;
+        justify-content: flex-end;
+        background-color:rgb(85, 51, 255);
+
+        &_icons{
+            display: flex;
+            margin-left: auto;
+            cursor: pointer;
+
+            img{
+                margin: 6px;
+                padding: 5px;
+                background-color: white;
+            }
+        }
+    }
+
+    &__content{
+        height: calc(100% - $banner-height);
+        width: 100%;
+        background-color: white;
+    }
+}
