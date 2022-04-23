@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import closeIcon from "./../../resources/assets/images/close.png";
 import minimiseIcon from "./../../resources/assets/images/minus.png";
 import maximiseIcon from "./../../resources/assets/images/maximise.png";
 
 
-export default function Window(props) {
+export default function Window() {
+    const[isShown, setIsShown] = useState(false);
+
     return (
         <>
+        {isShown ? (
             <div className="v-window">
                 <div className="v-window__banner">
                     <div className="v-window__banner_icons">
@@ -20,6 +23,7 @@ export default function Window(props) {
                     
                 </div>
             </div>
+            ): null}
         </>
     );
 
