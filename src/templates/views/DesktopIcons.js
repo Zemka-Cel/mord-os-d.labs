@@ -1,12 +1,16 @@
-import React from "react";
+import React, {useContext} from "react";
 import bin from "./../../resources/assets/images/bin.png";
 import myComputer from "./../../resources/assets/images/desktop-computer.png";
 import folder from "./../../resources/assets/images/empty-folder.png";
 import txtFile from "./../../resources/assets/images/txt-file.png";
 import Icon from "../components/icon";
+import { windowContext } from "./UserPage";
 
 
 export default function DesktopIcons(props) {
+
+    const { state, actions } = useContext(windowContext);
+
 
     // Icons info
     const database = [
@@ -40,8 +44,6 @@ export default function DesktopIcons(props) {
         },
        
     ];
-
-    
 
 
     return (
