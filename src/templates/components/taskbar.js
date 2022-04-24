@@ -31,7 +31,7 @@ export default function Taskbar(props) {
             <div className="c-taskbar__menu">
                 <img className="c-taskbar__menu_logo" src={menuLogo} alt="menu-icon" onClick={toggleMenu}/>
                 {showMenu ? (
-                    <Menu userImg={props.userImg} />
+                    <Menu userImg={props.userImg} setShowMenu={setShowMenu}/>
                 ):null}
             </div>
             <div className="c-taskbar__date">

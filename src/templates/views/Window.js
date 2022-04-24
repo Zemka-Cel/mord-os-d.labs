@@ -8,19 +8,19 @@ import { windowContext } from "./UserPage";
 
 export default function Window() {
 
-    const { state, actions } = useContext(windowContext);
+    const { windowState, windowActions } = useContext(windowContext);
     const handleClose = () => {
-        actions.setIsWindowShown(prev => { return { ...prev, state: false } })
+        windowActions.setIsWindowShown(prev => { return { ...prev, state: false } })
     }
 
     return (
         <>
         
-         {state.windowShown.state ? (
+         {windowState.windowShown.state ? (
             <div className="v-window">
                 <div className="v-window__banner">
                     <div className="v-window__banner_type">
-                        <h3>{state.windowShown.name}</h3>
+                        <h3>{windowState.windowShown.name}</h3>
                     </div>
                     <div className="v-window__banner_icons">
                         <img className="v-window__banner_closeIcon" src={minimiseIcon} alt="alt-icon"/>
@@ -31,7 +31,7 @@ export default function Window() {
                 </div>
                 <div className="v-window__content">
                     {/* display content based on icon type folder/text */}
-                    {state.windowShown.type === "text" ? (
+                    {windowState.windowShown.type === "text" ? (
                             <InputText />
                     ): null}
                 </div>

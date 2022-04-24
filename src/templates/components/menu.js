@@ -1,11 +1,17 @@
 import React, { useContext } from "react";
 import { isAuthorisedContext } from "./../../App";
+import { windowContext } from "./../views/UserPage";
 
 
 export default function Menu(props) {
 
     const { state, actions } = useContext(isAuthorisedContext);
+    const { windowState, windowActions } = useContext(windowContext);
 
+    const handleExplorerClick = (event) => {
+        windowActions.setIsWindowShown(prev => { return { ...prev, state: true, type: 'folder', name: event.currentTarget.textContent } });
+        props.setShowMenu(false);
+    }
 
     const handleLogout = () => {
         actions.setIsAuth(false);
@@ -15,10 +21,10 @@ export default function Menu(props) {
         <>
             <div className="c-menu">
                 <ul className="c-menu__list">
-                    <li>Programs</li>
-                    <li>Documents</li>
-                    <li>Settings</li>
-                    <li>Help</li>
+                    <li onClick={handleExplorerClick}>Programs</li>
+                    <li onClick={handleExplorerClick}>Documents</li>
+                    <li onClick={handleExplorerClick}>Settings</li>
+                    <li onClick={handleExplorerClick}>Help</li>
                 </ul>
                 <ul className="c-menu__list">
                     <li onClick={handleLogout}>Log out</li>

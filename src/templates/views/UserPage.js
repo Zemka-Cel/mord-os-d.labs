@@ -11,7 +11,7 @@ export const windowContext = React.createContext(null);
 export default function UserPage(props) {
 
     const [windowShown, setIsWindowShown] = useState({state: false, type: '', name: ''});
-    const windowState = { state: { windowShown }, actions: { setIsWindowShown } };
+    const windowState = { windowState: { windowShown }, windowActions: { setIsWindowShown } };
 
     return (
         <>

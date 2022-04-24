@@ -2,10 +2,10 @@ import React, {useContext} from "react";
 import { windowContext } from "./../views/UserPage";
 
 export default function Icon(props) {
-    const { state, actions } = useContext(windowContext);
+    const { windowState, windowActions } = useContext(windowContext);
 
     const handleIconClick = () => {
-        actions.setIsWindowShown(prev => {return {...prev, state: true, type: props.type, name: props.text}});
+        windowActions.setIsWindowShown(prev => {return {...prev, state: true, type: props.type, name: props.text}});
     }
 
     return (
