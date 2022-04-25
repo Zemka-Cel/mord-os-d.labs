@@ -15,7 +15,7 @@ export const fileContext = React.createContext(null);
 
 function App() {
 
-  const [isAuth, setIsAuth] = useState(true);
+  const [isAuth, setIsAuth] = useState(false);
   const [files, setFiles] = useState([{}]);
 
   const filesContext = { files: { files }, setFiles: { setFiles } };

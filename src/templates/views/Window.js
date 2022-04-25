@@ -34,7 +34,7 @@ export default function Window() {
                     {/* display content based on icon type folder/text */}
                     {windowState.windowShown.type === "text" ? (
                             <InputText object={windowState.windowShown.object}/>
-                    ): <Folder/>}
+                        ) : <Folder folderType={windowState.windowShown.type}/>}
                 </div>
             </div>
             ): null}

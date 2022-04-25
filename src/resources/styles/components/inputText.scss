@@ -4,6 +4,19 @@
     display: flex;
     flex-direction: column;
 
+    &__save{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-top: 5px;
+    }
+
+    &__fileName{
+        padding: 10px;
+        font-size: 14px;
+        border-radius: 10px;
+    }
+
     &__saveBtn{
         width: fit-content;
         padding: 10px 20px;
@@ -14,7 +27,7 @@
         color: white;
         font-weight: 500;
         margin: 5px;
-        margin-left: auto;
+        
     }
 
     &__textarea{

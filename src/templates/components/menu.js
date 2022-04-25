@@ -9,7 +9,7 @@ export default function Menu(props) {
     const { windowState, windowActions } = useContext(windowContext);
 
     const handleExplorerClick = (event) => {
-        windowActions.setIsWindowShown(prev => { return { ...prev, state: true, type: 'folder', name: event.currentTarget.textContent } });
+        windowActions.setIsWindowShown(prev => { return { ...prev, state: true, type: event.currentTarget.type, name: event.currentTarget.textContent } });
         props.setShowMenu(false);
     }
 
@@ -17,14 +17,50 @@ export default function Menu(props) {
         actions.setIsAuth(false);
     }
 
+    // menu list info
+    const menuList = [
+        {
+
+            key: '1',
+            type: 'other',
+            text: "Programs"
+        },
+        {
+
+            key: '2',
+            type: 'other',
+            text: "Settings"
+        },
+        {
+
+            key: '3',
+            type: 'documents',
+            text: "Documents"
+        },
+        {
+
+            key: '4',
+            type: 'text',
+            text: "New Text File"
+        },
+        {
+
+            key: '5',
+            type: 'other',
+            text: "Help"
+        }
+    ];
+
+
     return (
         <>
             <div className="c-menu">
                 <ul className="c-menu__list">
-                    <li onClick={handleExplorerClick}>Programs</li>
-                    <li onClick={handleExplorerClick}>Documents</li>
-                    <li onClick={handleExplorerClick}>Settings</li>
-                    <li onClick={handleExplorerClick}>Help</li>
+                    {menuList.map(item => 
+                        <>
+                            <li onClick={handleExplorerClick} type={item.type} key={item.key}>{item.text}</li>
+                        </>
+                    )}
                 </ul>
                 <ul className="c-menu__list">
                     <li onClick={handleLogout}>Log out</li>

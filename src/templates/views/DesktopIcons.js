@@ -15,22 +15,21 @@ export default function DesktopIcons(props) {
     // Icons info
     const database = [
         {
-            
-            type: 'folder',
+            type: 'other',
             img: bin,
             alt: "alt-text",
             text: "Recycle bin"
         },
         {
             
-            type: 'folder',
+            type: 'other',
             img: myComputer,
             alt: "alt-text",
             text: "This PC"
         },
         {
             
-            type: 'folder',
+            type: 'documents',
             img: folder,
             alt: "alt-text",
             text: "My Docs"
