@@ -5,7 +5,7 @@ export default function Icon(props) {
     const { windowState, windowActions } = useContext(windowContext);
 
     const handleIconClick = () => {
-        windowActions.setIsWindowShown(prev => {return {...prev, state: true, type: props.type, name: props.text}});
+        windowActions.setIsWindowShown(prev => {return {...prev, state: true, type: props.type, name: props.text, object: props.object}});
     }
 
     return (

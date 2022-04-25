@@ -4,6 +4,7 @@ import minimiseIcon from "./../../resources/assets/images/minus.png";
 import maximiseIcon from "./../../resources/assets/images/maximise.png";
 import InputText from "../components/inputText";
 import { windowContext } from "./UserPage";
+import Folder from "../components/folder";
 
 
 export default function Window() {
@@ -32,8 +33,8 @@ export default function Window() {
                 <div className="v-window__content">
                     {/* display content based on icon type folder/text */}
                     {windowState.windowShown.type === "text" ? (
-                            <InputText />
-                    ): null}
+                            <InputText object={windowState.windowShown.object}/>
+                    ): <Folder/>}
                 </div>
             </div>
             ): null}

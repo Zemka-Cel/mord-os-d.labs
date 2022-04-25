@@ -2,7 +2,7 @@ import React, {useContext} from "react";
 import bin from "./../../resources/assets/images/bin.png";
 import myComputer from "./../../resources/assets/images/desktop-computer.png";
 import folder from "./../../resources/assets/images/empty-folder.png";
-import txtFile from "./../../resources/assets/images/txt-file.png";
+import newTxtFile from "./../../resources/assets/images/addition.png";
 import Icon from "../components/icon";
 import { windowContext } from "./UserPage";
 
@@ -38,9 +38,9 @@ export default function DesktopIcons(props) {
         {
             
             type: 'text',
-            img: txtFile,
+            img: newTxtFile,
             alt: "alt-text",
-            text: "txt-file.txt"
+            text: "Create New Text File"
         },
        
     ];
