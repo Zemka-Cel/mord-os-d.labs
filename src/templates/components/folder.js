@@ -25,9 +25,15 @@ export default function Folder(props) {
         setFiles.setFiles(newArray);
     }
 
-    const sortBySize = () =>{
+    const sortBySizeAscending = () =>{
         const newArray = [...localStorageFiles];
         newArray.sort((a, b) => { return a.content === b.content ? 0 : a.content < b.content ? -1 : 1});
+        setFiles.setFiles(newArray);
+    }
+
+    const sortBySizeDescending = () =>{
+        const newArray = [...localStorageFiles];
+        newArray.sort((a, b) => { return b.content === a.content ? 0 : b.content < a.content ? -1 : 1});
         setFiles.setFiles(newArray);
     }
 
@@ -76,7 +82,8 @@ export default function Folder(props) {
                                     <button className="c-folder__btn" onClick={sortAscending}>Sort ascending (id)</button>
                                     <button className="c-folder__btn" onClick={sortDescending}>Sort descending (id)</button>
                                     <button className="c-folder__btn" onClick={sortByName}>Sort by name</button>
-                                    <button className="c-folder__btn" onClick={sortBySize}>Sort by size</button>
+                                    <button className="c-folder__btn" onClick={sortBySizeAscending}>Sort by size ascending</button>
+                                    <button className="c-folder__btn" onClick={sortBySizeDescending}>Sort by size descending</button>
                             </>
                         ) : <h1>You don't have any files created!</h1>}
                         <div className="c-folder__iconsWrapper">
