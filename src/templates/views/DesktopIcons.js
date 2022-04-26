@@ -3,6 +3,7 @@ import bin from "./../../resources/assets/images/bin.png";
 import myComputer from "./../../resources/assets/images/desktop-computer.png";
 import folder from "./../../resources/assets/images/empty-folder.png";
 import newTxtFile from "./../../resources/assets/images/addition.png";
+import gallery from "./../../resources/assets/images/gallery.png";
 import Icon from "../components/icon";
 import { windowContext } from "./UserPage";
 
@@ -40,6 +41,12 @@ export default function DesktopIcons(props) {
             img: newTxtFile,
             alt: "alt-text",
             text: "Create New Text File"
+        },
+        {
+            type: 'gallery',
+            img: gallery,
+            alt: "alt-text",
+            text: "Gallery"
         },
        
     ];

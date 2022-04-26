@@ -5,6 +5,7 @@ import maximiseIcon from "./../../resources/assets/images/maximise.png";
 import InputText from "../components/inputText";
 import { windowContext } from "./UserPage";
 import Folder from "../components/folder";
+import Gallery from "../components/gallery";
 
 
 export default function Window() {
@@ -34,7 +35,12 @@ export default function Window() {
                     {/* display content based on icon type folder/text */}
                     {windowState.windowShown.type === "text" ? (
                             <InputText object={windowState.windowShown.object}/>
-                        ) : <Folder folderType={windowState.windowShown.type}/>}
+                        ) 
+                        : windowState.windowShown.type === "gallery" ?
+                         (<Gallery folderType={windowState.windowShown.type}/>) 
+                        : (<Folder folderType={windowState.windowShown.type} />)
+                    }
+
                 </div>
             </div>
             ): null}

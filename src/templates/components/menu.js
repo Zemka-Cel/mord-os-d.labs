@@ -46,6 +46,12 @@ export default function Menu(props) {
         {
 
             key: '5',
+            type: 'gallery',
+            text: "Gallery"
+        },
+        {
+
+            key: '6',
             type: 'other',
             text: "Help"
         }
